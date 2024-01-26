@@ -20,4 +20,14 @@ document.addEventListener('scroll', function () {
             document.getElementById('aquaman_section_2').style.display = 'none';
         }, 2800);
     }
+
+    // scroll to section-3 with id section-3 => add class animate__animated  to aquaman_section_3, aquaman_section_3_text
+    const section3 = document.getElementById('section-3');
+    const section3_text = document.getElementById('aquaman_section_3_text');
+    const aquaman_section_3 = document.getElementById('aquaman_section_3');
+
+    if (window.scrollY > section3.offsetTop - window.innerHeight / 2) {
+        section3_text.classList.add('animate__animated');
+        aquaman_section_3.classList.add('animate__animated');
+    }
 });
