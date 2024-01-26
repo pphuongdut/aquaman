@@ -100,6 +100,10 @@
     text-shadow: 5px 5px rgb(50, 193, 218);
 }
 
+.text-grobold-description {
+    font-family: 'GROBOLD', sans-serif;
+}
+
 .navbar {
     background-image: url(../img/Slide1/header-bg.svg);
 }
