@@ -26,7 +26,7 @@ document.addEventListener('scroll', function () {
     const section3_text = document.getElementById('aquaman_section_3_text');
     const aquaman_section_3 = document.getElementById('aquaman_section_3');
 
-    if (window.scrollY > section3.offsetTop - window.innerHeight / 2) {
+    if (window.scrollY > section3?.offsetTop - window.innerHeight / 2) {
         section3_text.classList.add('animate__animated');
         aquaman_section_3.classList.add('animate__animated');
     }

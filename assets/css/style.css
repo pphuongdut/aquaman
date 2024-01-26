@@ -155,17 +155,3 @@
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(2, 35, 50);
 }
-
-.scrolling-wrapper-flexbox {
-    height: 75px;
-    width: 100%;
-    -webkit-overflow-scrolling: touch;
-    &::-webkit-scrollbar {
-        display: none;
-    }
-}
-
-.horizontal-scroll {
-    overflow: hidden;
-    position: relative;
-}
