@@ -200,7 +200,7 @@ video::-webkit-media-controls {
 }
 
 .animate-text {
-    animation: blinker 1.5s step-end infinite;
+    animation: blinker 2s step-end infinite;
     font-family: 'GROBOLD', sans-serif;
 }
 
