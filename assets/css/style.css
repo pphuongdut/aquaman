@@ -181,3 +181,33 @@ video::-webkit-media-controls {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@keyframes roll {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(100vw, 100vh);
+    }
+    /* 100% {
+        transform: translate(0, 0);
+    } */
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.animate-text {
+    animation: blinker 1.5s step-end infinite;
+    font-family: 'GROBOLD', sans-serif;
+}
+
+.manta {
+    animation-name: roll;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
