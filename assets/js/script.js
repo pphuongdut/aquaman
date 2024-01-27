@@ -1,3 +1,16 @@
+// Function to check if an element is in the viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
 document.addEventListener('scroll', function () {
     var hiddenElement = document.getElementById('bubbleContainer');
 
@@ -8,26 +21,18 @@ document.addEventListener('scroll', function () {
         hiddenElement.style.display = 'none'; // Hide the element
     }
 
-    // scroll to section 2 => visible aquaman_section_2, settimout 3s to hide
+    // if (window.scrollY > window.innerHeight / 3) {
+    //     var video = document.getElementById('aquaman_section_2');
+    //     video.play();
+    // }
 
-    if (window.scrollY > window.innerHeight / 3) {
-        console.log(document.getElementById('aquaman_section_2'));
-        // Show aquaman section 2
-        document.getElementById('aquaman_section_2').style.display = 'block';
+    const elementToAnimate = document.querySelector('.hidden-element');
 
-        // Hide after 3 seconds
-        setTimeout(() => {
-            document.getElementById('aquaman_section_2').style.display = 'none';
-        }, 2800);
-    }
-
-    // scroll to section-3 with id section-3 => add class animate__animated  to aquaman_section_3, aquaman_section_3_text
-    const section3 = document.getElementById('section-3');
-    const section3_text = document.getElementById('aquaman_section_3_text');
-    const aquaman_section_3 = document.getElementById('aquaman_section_3');
-
-    if (window.scrollY > section3?.offsetTop - window.innerHeight / 2) {
-        section3_text.classList.add('animate__animated');
-        aquaman_section_3.classList.add('animate__animated');
+    if (isInViewport(elementToAnimate)) {
+        elementToAnimate.style.display = 'block';
+        elementToAnimate.classList.add(
+            'animate__animated',
+            'animate__slideInUp'
+        );
     }
 });
