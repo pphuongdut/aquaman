@@ -142,10 +142,6 @@
     border-radius: 5px;
     display: none;
 }
-/* Hide video controls */
-video::-webkit-media-controls {
-    display: none !important;
-}
 
 .video-container {
     width: 100vw;
