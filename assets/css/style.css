@@ -132,7 +132,7 @@
 }
 
 .outro-section {
-    background-image: url(../img/outro-bg.svg);
+    background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
 }
